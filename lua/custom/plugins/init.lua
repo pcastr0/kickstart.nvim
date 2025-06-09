@@ -24,4 +24,22 @@ return {
     ---@type render.md.UserConfig
     opts = {},
   },
+  {
+    'CopilotC-Nvim/CopilotChat.nvim',
+    dependencies = {
+      { 'github/copilot.vim' }, -- or zbirenbaum/copilot.lua
+      { 'nvim-lua/plenary.nvim', branch = 'master' }, -- for curl, log and async functions
+    },
+    build = 'make tiktoken', -- Only on MacOS or Linux
+    opts = {
+      -- See Configuration section for options
+    },
+    keys = {
+      { '<leader>zc', ':CopilotChatToggle<CR>', mode = 'n', desc = 'Copilot Chat' },
+      { '<leader>ze', ':CopilotChatExplain<CR>', mode = 'v', desc = 'Explain Code' },
+      { '<leader>zr', ':CopilotChatReview<CR>', mode = 'v', desc = 'Review Code' },
+      { '<leader>zf', ':CopilotChatFix<CR>', mode = 'v', desc = 'Fix Code Issues' },
+      { '<leader>zo', ':CopilotChatOptimize<CR>', mode = 'v', desc = 'Optimize Code' },
+    },
+  },
 }
