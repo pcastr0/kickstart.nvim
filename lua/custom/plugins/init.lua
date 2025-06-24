@@ -32,7 +32,8 @@ return {
     },
     build = 'make tiktoken', -- Only on MacOS or Linux
     opts = {
-      -- See Configuration section for options
+      chat_autocomplete = false,
+      model = 'claude-3.5-sonnet',
     },
     keys = {
       { '<leader>zc', ':CopilotChatToggle<CR>', mode = 'n', desc = 'Copilot Chat' },
@@ -40,6 +41,7 @@ return {
       { '<leader>zr', ':CopilotChatReview<CR>', mode = 'v', desc = 'Review Code' },
       { '<leader>zf', ':CopilotChatFix<CR>', mode = 'v', desc = 'Fix Code Issues' },
       { '<leader>zo', ':CopilotChatOptimize<CR>', mode = 'v', desc = 'Optimize Code' },
+      { '<leader>zm', ':CopilotChatModels<CR>', mode = 'n', desc = 'Copilot Models' },
     },
   },
 }

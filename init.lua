@@ -102,7 +102,7 @@ vim.g.have_nerd_font = false
 vim.o.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
-vim.o.relativenumber = true
+vim.o.relativenumber = false
 vim.o.tabstop = 2 -- Number of spaces that a <Tab> counts for
 vim.o.shiftwidth = 2 -- Number of spaces to use for each step of (auto)indent
 vim.o.expandtab = true -- Use spaces instead of tabs
