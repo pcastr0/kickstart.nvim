@@ -33,7 +33,7 @@ return {
   --   build = 'make tiktoken', -- Only on MacOS or Linux
   --   opts = {
   --     chat_autocomplete = false,
-  --     -- model = 'claude-3.7-sonnet',
+  --     model = 'claude-3.5-sonnet',
   --   },
   --   keys = {
   --     { '<leader>zc', ':CopilotChatToggle<CR>', mode = 'n', desc = 'Copilot Chat' },
@@ -63,6 +63,14 @@ return {
     opts = {
       -- add any opts here
       -- for example
+      windows = {
+        position = 'left',
+        ask = {
+          floating = true,
+          start_insert = false,
+        },
+      },
+
       provider = 'copilot',
       providers = {
         -- claude = {
@@ -76,7 +84,7 @@ return {
         -- },
         copilot = {
           endpoint = 'https://api.githubcopilot.com',
-          model = 'claude-sonnet-3.5',
+          model = 'claude-3.5-sonnet',
           timeout = 30000, -- Timeout in milliseconds
           extra_request_body = {
             temperature = 0.75,
