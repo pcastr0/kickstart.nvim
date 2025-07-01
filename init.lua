@@ -826,6 +826,7 @@ require('lazy').setup({
         opts = {},
       },
       'folke/lazydev.nvim',
+      -- 'Kaiser-Yang/blink-cmp-avante',
     },
     --- @module 'blink.cmp'
     --- @type blink.cmp.Config
@@ -874,6 +875,13 @@ require('lazy').setup({
         default = { 'lsp', 'path', 'snippets', 'lazydev' },
         providers = {
           lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
+          -- avante = {
+          --   module = 'blink-cmp-avante',
+          --   name = 'Avante',
+          --   opts = {
+          --     -- options for blink-cmp-avante
+          --   },
+          -- },
         },
       },
 
@@ -912,7 +920,7 @@ require('lazy').setup({
       require('kanagawa').setup {
         compile = false, -- enable compiling the colorscheme
         undercurl = true, -- enable undercurls
-        commentStyle = { italic = false },
+        commentStyle = { italic = true },
         functionStyle = {},
         keywordStyle = { italic = true },
         statementStyle = { bold = true },
