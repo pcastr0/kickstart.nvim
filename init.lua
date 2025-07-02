@@ -872,7 +872,7 @@ require('lazy').setup({
       },
 
       sources = {
-        default = { 'avante', 'lsp', 'path', 'snippets', 'lazydev' },
+        default = { 'lsp', 'path', 'snippets', 'lazydev', 'avante' },
         providers = {
           lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
           avante = {
@@ -920,7 +920,7 @@ require('lazy').setup({
       require('kanagawa').setup {
         compile = false, -- enable compiling the colorscheme
         undercurl = true, -- enable undercurls
-        commentStyle = { italic = true },
+        commentStyle = { italic = false },
         functionStyle = {},
         keywordStyle = { italic = true },
         statementStyle = { bold = true },

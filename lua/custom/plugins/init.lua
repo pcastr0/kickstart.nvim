@@ -63,34 +63,56 @@ return {
     opts = {
       -- add any opts here
       -- for example
+      mode = 'agentic',
       windows = {
         position = 'left',
         ask = {
-          floating = true,
+          floating = false,
           start_insert = false,
         },
       },
-
-      provider = 'copilot',
+      provider = 'claude',
+      -- provider = 'ollama',
       providers = {
-        -- claude = {
-        --   endpoint = 'https://api.anthropic.com',
-        --   model = 'claude-sonnet-4-20250514',
-        --   timeout = 30000, -- Timeout in milliseconds
+        -- ollama = {
+        --   api_key_name = '',
+        --   endpoint = 'http://127.0.0.1:11434',
+        --   model = 'qwen2.5-coder:14b',
         --   extra_request_body = {
         --     temperature = 0.75,
         --     max_tokens = 20480,
         --   },
+        --   disable_tools = true
         -- },
-        copilot = {
-          endpoint = 'https://api.githubcopilot.com',
-          model = 'claude-3.5-sonnet',
+        claude = {
+          endpoint = 'https://api.anthropic.com',
+          model = 'claude-sonnet-4-20250514',
           timeout = 30000, -- Timeout in milliseconds
           extra_request_body = {
             temperature = 0.75,
             max_tokens = 20480,
           },
         },
+        -- claude = {
+        --   endpoint = 'https://api.anthropic.com',
+        --   model = 'claude-3-5-sonnet-20241022',
+        --   extra_request_body = {
+        --     temperature = 0.75,
+        --     max_tokens = 4096,
+        --   },
+        -- },
+        -- gemini = {
+        --   endpoint = 'https://generativelanguage.googleapis.com/v1beta/models',
+        --   model = 'gemini-2.0-flash',
+        --   timeout = 30000, -- Timeout in milliseconds
+        --   context_window = 1048576,
+        --   use_ReAct_prompt = true,
+        --   extra_request_body = {
+        --     generationConfig = {
+        --       temperature = 0.75,
+        --     },
+        --   },
+        -- },
       },
     },
     dependencies = {
